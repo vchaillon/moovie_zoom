@@ -1,0 +1,35 @@
+.link-nav{
+    text-decoration: none;
+    color: #000;
+    margin-left: 10px;
+    padding: 0 20px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-link-nav {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+
+}
+
+.logo {
+    margin-left: 25px;
+}
+
+
+.logo i::before {
+    font-size: 30px;
+}
+
+.logo i::before {
+    margin-right: 5px;
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+
