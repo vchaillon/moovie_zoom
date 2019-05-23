@@ -1,19 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: linear-gradient(#cbcbcb, #eaeaea);
+}
+
+#navbar input {
+    width: 60%;
+}
+
 .link-nav{
     text-decoration: none;
     color: #000;
     margin-left: 10px;
     padding: 0 20px;
 }
-
-#navbar {
-    display: flex;
-    justify-content: space-between;
+.link-nav:hover {
+    text-decoration: underline;
 }
-
 .content-link-nav {
     display: flex;
     width: 50%;
     justify-content: center;
+    padding-top: 5px;
 
 }
 
