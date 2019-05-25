@@ -51,6 +51,12 @@ class Article
      */
     private $lastUpdate;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="articles")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $categoryName;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -136,6 +142,18 @@ class Article
     public function setLastUpdate(\DateTimeInterface $lastUpdate): self
     {
         $this->lastUpdate = $lastUpdate;
+
+        return $this;
+    }
+
+    public function getCategoryName(): ?Category
+    {
+        return $this->categoryName;
+    }
+
+    public function setCategoryName(?Category $categoryName): self
+    {
+        $this->categoryName = $categoryName;
 
         return $this;
     }
