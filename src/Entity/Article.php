@@ -55,6 +55,12 @@ class Article
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="articles")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $categoryName;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="articles")
      */
     private $category_name;
 
@@ -159,12 +165,12 @@ class Article
 
     public function getCategoryName(): ?Category
     {
-        return $this->category_name;
+        return $this->categoryName;
     }
 
-    public function setCategoryName(?Category $category_name): self
+    public function setCategoryName(?Category $categoryName): self
     {
-        $this->category_name = $category_name;
+        $this->categoryName = $categoryName;
 
         return $this;
     }
