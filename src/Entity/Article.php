@@ -60,11 +60,6 @@ class Article
     private $categoryName;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="articles")
-     */
-    private $category_name;
-
-    /**
      * @ORM\OneToMany(targetEntity="App\Entity\Comment", mappedBy="article")
      */
     private $comments;
