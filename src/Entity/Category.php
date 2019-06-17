@@ -24,7 +24,7 @@ class Category
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="category_name")
+     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="categoryName")
      */
     private $articles;
 
@@ -32,7 +32,6 @@ class Category
     {
         $this->articles = new ArrayCollection();
     }
-
     public function getId(): ?int
     {
         return $this->id;
