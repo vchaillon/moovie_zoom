@@ -18,10 +18,12 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="article_index", methods={"GET"})
      */
-    public function index(): Response
+    public function index(ArticleRepository $articleRepository): Response
     {
+        $listArticle = $articleRepository->findAll();
+
         return $this->render('static/home.html.twig', [
-            'hhey' => 'hey',
+            'listArticle' => $listArticle,
         ]);
     }
 

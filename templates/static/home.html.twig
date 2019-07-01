@@ -2,21 +2,135 @@
 
 {% block title %}{% endblock %}
 {% block body%}
-    <p>hello</p>
-    <div class="main-home">
-        <div class="most-download">
-            <div class="art-content">
-
+    <div id="main-home">
+            {#        LES PLUS TELECHARGER    #}
+        <div id="most-download">
+            <div class="section-title">
+                <h2 >Les plus téléchargés</h2>
             </div>
-        </div>
-        <div class="content-art-category">
-            <div class="latest-add">
-                <div class="art-content">
-
+            <div class="download-article">
+                <div class="art-download">
+                    {% for item in listArticle %}
+                    <h3>{{ item.title }}</h3>
+                    <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                    <p>{{ item.body }}
+                    </p>
+                    {% endfor %}
+                </div>
+                <div class="art-download">
+                    <h3>Titre article</h3>
+                    <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi cum, dolorem eaque eius
+                        iure nesciunt nobis nostrum, odit rem sequi similique totam, vel. Beatae cumque dolorum eius
+                        natus placeat.
+                    </p>
+                </div>
+                <div class="art-download">
+                    <h3>Titre article</h3>
+                    <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi cum, dolorem eaque eius
+                        iure nesciunt nobis nostrum, odit rem sequi similique totam, vel. Beatae cumque dolorum eius
+                        natus placeat.
+                    </p>
+                </div>
+                <div class="art-download">
+                    <h3>Titre article</h3>
+                    <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi cum, dolorem eaque eius
+                        iure nesciunt nobis nostrum, odit rem sequi similique totam, vel. Beatae cumque dolorum eius
+                        natus placeat.
+                    </p>
                 </div>
             </div>
-            <div class="category">
-                <div class="category-content">
+        </div>
+            {#   DERNIER AJOUTS + LIST CATEGORY   #}
+        <div id="content-latest-and-category">
+            <div id="latest-add">
+                <div class="section-title">
+                    <h2>Derniers ajouts</h2>
+                </div>
+                <div id="content-latest">
+                    <div class="art-latest">
+                        <h3>Titre article</h3>
+                        <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi cum, dolorem eaque eius
+                            iure nesciunt nobis nostrum, odit rem sequi similique totam, vel. Beatae cumque dolorum eius
+                            natus placeat.
+                        </p>
+                    </div>
+                    <div class="art-latest">
+                        <h3>Titre article</h3>
+                        <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi cum, dolorem eaque eius
+                            iure nesciunt nobis nostrum, odit rem sequi similique totam, vel. Beatae cumque dolorum eius
+                            natus placeat.
+                        </p>
+                    </div>
+                    <div class="art-latest">
+                        <h3>Titre article</h3>
+                        <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi cum, dolorem eaque eius
+                            iure nesciunt nobis nostrum, odit rem sequi similique totam, vel. Beatae cumque dolorum eius
+                            natus placeat.
+                        </p>
+                    </div>
+                    <div class="art-latest">
+                        <h3>Titre article</h3>
+                        <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi cum, dolorem eaque eius
+                            iure nesciunt nobis nostrum, odit rem sequi similique totam, vel. Beatae cumque dolorum eius
+                            natus placeat.
+                        </p>
+                    </div>
+                    <div class="art-latest">
+                        <h3>Titre article</h3>
+                        <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi cum, dolorem eaque eius
+                            iure nesciunt nobis nostrum, odit rem sequi similique totam, vel. Beatae cumque dolorum eius
+                            natus placeat.
+                        </p>
+                    </div>
+                    <div class="art-latest">
+                        <h3>Titre article</h3>
+                        <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi cum, dolorem eaque eius
+                            iure nesciunt nobis nostrum, odit rem sequi similique totam, vel. Beatae cumque dolorum eius
+                            natus placeat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="category">
+                <div id="title-category">
+                    <h3>Listes des categories</h3>
+                </div>
+                <div class="content-category">
+                    <ul>
+                        <li>
+                            <h4>Action</h4>
+                            <div>
+                                <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Horror</h4>
+                            <div>
+                                <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Humour</h4>
+                            <div>
+                                <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>Science-Fiction</h4>
+                            <div>
+                                <img src="{{ asset('images/moovie.jpg') }}" alt="">
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
